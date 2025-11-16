@@ -1,0 +1,39 @@
+﻿come_out_as_trans = {
+	type = character_event
+    # TODO: all the text of this stuff
+	title = come_out_as_trans.t
+	desc = come_out_as_trans.desc
+	theme = friendly
+	
+	left_portrait = {
+		character = root
+		animation = love
+	}
+	right_portrait = {
+		character = scope:ward
+		animation = worry
+	}
+
+	option = {
+		name = come_out_as_trans.a
+		if = {
+            # TODO not sure about this logic/event triggering
+			limit = {
+                scope:ward = { is_female = yes }
+			}
+            scope:ward = {
+                is_female = no
+                add_trait = transgender
+            }
+		}
+        else = {
+            scope:ward = {
+                is_female = yes
+                add_trait = transgender
+            }
+        }
+		ai_chance = {
+			base = 100
+		}
+	}
+}

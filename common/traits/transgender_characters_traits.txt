@@ -1,0 +1,24 @@
+﻿transgender = {
+	category = health
+	physical = yes
+	
+	inherit_chance = 0
+	
+	ruler_designer_cost = 0
+
+	attraction_opinion = 5
+
+	name = transgender_name
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }					
+				}
+				desc = transgender_desc
+			}
+			desc = transgender_desc
+		}
+	}
+}
